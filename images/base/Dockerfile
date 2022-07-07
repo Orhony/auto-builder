@@ -2,7 +2,7 @@ FROM alpine:latest
 
 RUN \
     apk -U upgrade && \
-    apk add git curl gcc g++ pkgconf-dev && \
+    apk add git curl gcc g++ pkgconf-dev openssl-dev && \
     git config --global user.email "builder@localhost" && \
     git config --global user.name "Builder" && \
     git config --global advice.detachedHead false
