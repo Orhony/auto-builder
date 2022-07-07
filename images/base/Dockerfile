@@ -2,4 +2,4 @@ FROM alpine:latest
 
 RUN \
     apk -U upgrade && \
-    apk -y install yasm p7zip
+    apk -y add yasm p7zip
