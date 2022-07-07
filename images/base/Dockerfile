@@ -2,12 +2,12 @@ FROM alpine:latest
 
 RUN \
     apt -y update && \
-    apt -y dist-upgrade && \
-    apt -y install build-essential yasm nasm p7zip-full && \
-    apt -y clean && \
-    git config --global user.email "builder@localhost" && \
-    git config --global user.name "Builder" && \
-    git config --global advice.detachedHead false
+    # apt -y dist-upgrade && \
+    # apt -y install build-essential yasm nasm p7zip-full && \
+    # apt -y clean && \
+    # git config --global user.email "builder@localhost" && \
+    # git config --global user.name "Builder" && \
+    # git config --global advice.detachedHead false
 
 ENV CARGO_HOME="/opt/cargo" RUSTUP_HOME="/opt/rustup" PATH="/opt/cargo/bin:${PATH}"
 RUN curl https://sh.rustup.rs -sSf | bash -s -- -y --no-modify-path && \
